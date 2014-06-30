@@ -4,12 +4,18 @@
 	width: 100%;
 }
 
+#main {
+	z-index: 1;
+	position: relative;
+}
+
 .kitty-pic {
-	position: absolute;
-	height: 10px;
-	width: 10px;
+	position: relative;
+	height: 15px;
+	width: 15px;
 }
 
 .gold {
-	position: relative;
+	position: absolute;
+	z-index: 2;
 }
