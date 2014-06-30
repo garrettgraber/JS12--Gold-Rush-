@@ -2,7 +2,7 @@ $(document).on('ready', function() {
   $('#main-map').click(function () {
   	var xValue = event.pageX;
   	var yValue = event.pageY;
-  	var docHeight = $(document).height();
+  	var docHeight = $('#main').height();
   	var docWidth = $(document).width();
   	var xValuePercent = (xValue/docWidth) * 100;
   	var yValuePercent = (yValue/docHeight) * 100;
@@ -25,12 +25,17 @@ $(document).on('ready', function() {
   $('#main-map').mousemove(function () {
   	var xValue = event.pageX;
   	var yValue = event.pageY;
-  	var docHeight = $(document).height();
+  	var docHeight = $('#main').height();
   	var docWidth = $(document).width();
   	var xValuePercent = (xValue/docWidth) * 100;
   	var yValuePercent = (yValue/docHeight) * 100;
   	console.log("pageX: " + event.pageX + ", pageY: " + event.pageY );
   	console.log("x-percentage: " + xValuePercent + ", y-percentage: " + yValuePercent);
+  });
+
+  $(document).on('click', '.gold', function() {
+  	console.log('remove funtion is firing');
+  	$(this).remove();
   });
 
   var createMarker = function(xVal, yVal) {
