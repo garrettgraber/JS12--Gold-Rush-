@@ -10,10 +10,11 @@
 }
 
 .kitty-pic {
-	display: block;
+	display: inline;
 	position: relative;
 	height: 15px;
 	width: 15px;
+	margin-right: 8px;
 }
 
 .gold {
@@ -23,9 +24,13 @@
 
 .textInfo{
 	position: relative;
+	display: inline;
+	float: right;
 	z-index: 3;
-	font-size: 14pt;
+	font-size: 12pt;
 	color: Crimson;
+	background-color: white;
+	padding: 7px;
 }
 
 .textInput {

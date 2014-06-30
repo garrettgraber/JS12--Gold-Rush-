@@ -44,6 +44,9 @@ var noteTemp;
   		yValuePercent = yValuePercent - 0.7;
   		var JqueryNew = createMarker(xValuePercent, yValuePercent);
   		var note = prompt('Please enter a note');
+
+  		if (note !== null) {
+
   		/*
   		var jQueryEnter = textInputFunc(xValuePercent, yValuePercent);
   		jQueryEnter.appendTo(JqueryNew);
@@ -53,11 +56,15 @@ var noteTemp;
 
   		*/  		
 
-		var jQueryNote = noteCreater(note);
-		jQueryNote.hide();
-		jQueryNote.appendTo(JqueryNew);
-		JqueryNew.appendTo($('#main'));
-  		console.log('it worked');
+			var jQueryNote = noteCreater(note);
+			jQueryNote.hide();
+			jQueryNote.appendTo(JqueryNew);
+			JqueryNew.appendTo($('#main'));
+	  		console.log('it worked');
+	  	}
+	  	else {
+	  		console.log('Point not added');
+	  	}
   	}
   	else {
   		console.log('yValue bad');
